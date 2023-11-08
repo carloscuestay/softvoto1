@@ -1,5 +1,5 @@
 """
-WSGI config for backend project.
+WSGI config for back_svoto project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

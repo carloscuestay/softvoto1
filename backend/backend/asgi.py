@@ -1,5 +1,5 @@
 """
-ASGI config for backend project.
+ASGI config for back_svoto project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
