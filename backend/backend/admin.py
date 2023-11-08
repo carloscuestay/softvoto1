@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import Backend
+from .models import registro
 
-admin.site.register(Backend)
+admin.site.register(registro)
