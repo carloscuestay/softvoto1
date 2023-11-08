@@ -10,3 +10,10 @@ class BackendSerializer(serializers.ModelSerializer):
         model = Registro
         fields = ['id', 'titulo', 'descripcion', 'creado', 'completado']
         
+class TodoToggleCompleteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=Registro
+        fields = ['id']
+        read_only_fields = ['titulo', 'descripcion', 'creado', 'completado']
+        
+        
