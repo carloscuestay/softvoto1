@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-class registro(models.Model):
+class Registro(models.Model):
     titulo = models.CharField(max_length=100)
     descripcion = models.TextField(blank=True)
     
