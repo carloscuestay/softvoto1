@@ -81,6 +81,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+        #'ENGINE': 'djongo',
+        #'NAME': 'softvotodb',
+        #'HOST': 'mongodb+srv://softvotouser:Cacy73181*@proyectoigdb.lh0hsiu.mongodb.net/?retryWrites=true&w=majority',
+        #'ENFORCE_SCHEMA': False
     }
 }
 
