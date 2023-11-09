@@ -49,21 +49,19 @@ class TodoToggleComplete(generics.UpdateAPIView):
     def perform_update(self, serializer):
         serializer.instance.completed=not(serializer.instance.completed)
         serializer.save()
-        
-        
 @csrf_exempt
 def signup(request):
-    if request.method == 'POST':
-        try:
-            data = JSONParser().parse(request)
-            user = User.objects.create_user(
-                username=data['username'],
-                password=data['password'])
-            user.save()
-            token = Token.objects.create(user=user)
-            return JsonResponse({'token':str(token)}, status=201)
-        except IntegrityError:
-            return JsonResponse(
+        if request.method == 'POST':
+            try:
+                data = JSONParser().parse(request)
+                user = User.objects.create_user(
+                    username=data['username'],
+                    password=data['password'])
+                user.save()
+                token = Token.objects.create(user=user)
+                return JsonResponse({'token':str(token)}, status=201)
+            except IntegrityError:
+                return JsonResponse(
                 {'error':'username taken. choose another username'},
             status=400)
     

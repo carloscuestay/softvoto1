@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-
+from api.views import signup
 
 
 urlpatterns = [
@@ -8,7 +8,7 @@ urlpatterns = [
     path('todos/', views.TodoListCreate.as_view()),
     path('todos/<int:pk>', views.TodoRetrieveUpdateDestroy.as_view()),
     path('todos/<int:pk>/complete', views.TodoToggleComplete.as_view()),
-    path('signup/', views.signup),
+    path('signup/', views.TodoToggleComplete.as_view(), name='signup'),
 ]
 
 
